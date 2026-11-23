@@ -12,7 +12,7 @@ import { getDatabase } from "https://www.gstatic.com/firebasejs/10.14.1/firebase
 const firebaseConfig = {
   apiKey: "TU_API_KEY",
   authDomain: "domino-online-361fb.firebaseapp.com",
-  databaseURL: "AQUI_VA_LA_URL_DE_TU_BASE_DE_DATOS",
+  databaseURL: "https://domino-online-361fb-default-rtdb.firebaseio.com",
   projectId: "domino-online-361fb",
   storageBucket: "domino-online-361fb.firebasestorage.app",
   messagingSenderId: "934894497792",
