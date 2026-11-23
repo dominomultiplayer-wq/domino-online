@@ -10,7 +10,7 @@ import {
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
+  apiKey: "AIzaSyBfUNGky2BE1gnMj2l3mFeV3AgQ3MP3Fxg",
   authDomain: "domino-online-361fb.firebaseapp.com",
   databaseURL: "https://domino-online-361fb-default-rtdb.firebaseio.com",
   projectId: "domino-online-361fb",
