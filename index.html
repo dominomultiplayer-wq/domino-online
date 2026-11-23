@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#103b2d">
+  <title>Dominó Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <p class="eyebrow">MULTIJUGADOR ONLINE</p>
+        <h1>🁣 Dominó Online</h1>
+      </div>
+      <span id="connection" class="status">Desconectado</span>
+    </header>
+
+    <section id="lobby" class="panel">
+      <h2>Entrar a una mesa</h2>
+      <label>Tu apodo
+        <input id="nickname" maxlength="18" placeholder="Ej. Carlos" autocomplete="nickname">
+      </label>
+      <div class="actions">
+        <button id="createRoom" class="primary">Crear sala</button>
+      </div>
+      <div class="join-row">
+        <input id="roomCode" maxlength="6" placeholder="Código de sala" aria-label="Código de sala">
+        <button id="joinRoom">Unirme</button>
+      </div>
+      <p class="hint">Comparte el código de 6 caracteres con tus amigos. Esta versión inicial admite hasta 4 jugadores.</p>
+      <p id="lobbyMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="game" class="hidden">
+      <div class="roombar panel">
+        <div><span class="muted">SALA</span><strong id="roomLabel">------</strong></div>
+        <button id="copyCode" class="small">Copiar código</button>
+        <button id="leaveRoom" class="small danger">Salir</button>
+      </div>
+      <section class="panel players-panel">
+        <h2>Jugadores</h2>
+        <div id="players" class="players"></div>
+      </section>
+      <section class="table">
+        <div class="table-heading">
+          <span>LA MESA</span>
+          <span id="turnLabel">Esperando jugadores…</span>
+        </div>
+        <div id="chain" class="chain"><p class="muted">Las fichas aparecerán aquí.</p></div>
+        <div id="gameMessage" class="game-message">Comparte el código para invitar jugadores.</div>
+      </section>
+      <section class="panel hand-panel">
+        <div class="hand-title">
+          <h2>Tus fichas</h2>
+          <span id="handCount" class="muted">0 fichas</span>
+        </div>
+        <div id="hand" class="hand"></div>
+        <p class="hint">Toca una ficha para jugarla. Si puede colocarse en ambos extremos, elige el lado.</p>
+        <div class="actions">
+          <button id="drawTile">Robar ficha</button>
+          <button id="passTurn">Pasar turno</button>
+          <button id="startGame" class="primary">Iniciar partida</button>
+        </div>
+      </section>
+    </section>
+
+    <footer>Dominó Online · Proyecto inicial</footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
