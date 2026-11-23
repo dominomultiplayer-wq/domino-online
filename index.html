@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -17,11 +18,21 @@
       <span id="connection" class="status">Desconectado</span>
     </header>
 
-    <section id="lobby" class="panel">
-      <h2>Entrar a una mesa</h2>
+    <section id="login" class="panel">
+      <h2>¡Bienvenido!</h2>
+      <p>Elige cómo quieres entrar al juego.</p>
       <label>Tu apodo
         <input id="nickname" maxlength="18" placeholder="Ej. Carlos" autocomplete="nickname">
       </label>
+      <div class="actions">
+        <button id="guestLogin" class="primary">Jugar como invitado</button>
+        <button id="googleLogin">Continuar con Google</button>
+      </div>
+      <p id="loginMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="lobby" class="panel hidden">
+      <h2>Entrar a una mesa</h2>
       <div class="actions">
         <button id="createRoom" class="primary">Crear sala</button>
       </div>
